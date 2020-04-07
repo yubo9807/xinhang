@@ -1,0 +1,222 @@
+@charset "UTF-8";
+.content {
+  margin-top: 60px;
+}
+
+.content .wrap {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.content .wrap .sort {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.content .wrap .sort span {
+  display: inline-block;
+  font-size: 14px;
+  color: #ccc;
+  cursor: pointer;
+  margin: 0 8px;
+}
+
+.content .wrap .sort .active {
+  color: white;
+}
+
+.content .wrap .line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #999;
+  margin: 10px 0;
+}
+
+.content .wrap .video-wraps {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.content .wrap .video-wraps .video-box {
+  position: relative;
+  margin: 0 .5rem 1rem .5rem;
+}
+
+.content .wrap .video-wraps .video-box img {
+  width: 100%;
+}
+
+.content .wrap .video-wraps .video-box p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.content .wrap .video-wraps .video-box::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../imgs/video_cover/play.png") no-repeat center/40%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.content .wrap .video-wraps .video-box:hover::after {
+  opacity: 1;
+  -webkit-transition: opacity .4s;
+  transition: opacity .4s;
+}
+
+.content .movies .video-wraps {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33.333333% 33.333333% 33.333333%;
+  margin-left: .5rem;
+}
+
+.content .movies .video-wraps .movies-box {
+  min-width: 360px;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.content .movies .video-wraps .movies-box img {
+  width: 160px;
+  height: 220px;
+  float: left;
+}
+
+.content .movies .video-wraps .movies-box .text {
+  float: left;
+  width: 180px;
+  margin-left: 20px;
+  line-height: 30px;
+}
+
+.content .movies .video-wraps .movies-box .text span {
+  color: #ccc;
+}
+
+.content .movies .video-wraps .movies-box .text h4 {
+  font-size: 18px;
+  color: #58c2ff;
+  font-weight: 100;
+}
+
+.content .movies .video-wraps .movies-box .text button {
+  padding: 3px 12px;
+  background: white;
+  border-radius: 3px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.content .movies .video-wraps .movies-box .text button:hover {
+  text-decoration: underline;
+}
+
+.ad {
+  width: 100%;
+  position: relative;
+}
+
+.ad img {
+  width: 100%;
+  margin: 0 .5rem 0 .5rem;
+  min-height: 34px;
+}
+
+.ad::after {
+  position: absolute;
+  content: '广告';
+  font-size: 12px;
+  padding: 1.4px 8px;
+  border: 1px solid white;
+  border-radius: 5px;
+  bottom: 5px;
+  right: 5px;
+  text-shadow: 1px 1px 3px black;
+  -webkit-box-shadow: 1px 1px 3px black;
+  box-shadow: 1px 1px 3px black;
+}
+
+/* 视频播放 */
+.play {
+  z-index: 11;
+  display: none;
+  position: fixed;
+  width: 85%;
+  max-width: 1366px;
+  max-height: 720px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: #000;
+}
+
+.play .close {
+  position: absolute;
+  right: 0;
+  padding: .5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-shadow: 2px 2px 3px black;
+}
+
+.play video {
+  background: #000;
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  height: 54px;
+  text-align: center;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1024px) and (min-width: 960px) {
+  .content .wrap .video-wraps {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  .content .movies .video-wraps {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (max-width: 959px) and (min-width: 661px) {
+  .content .wrap .video-wraps {
+    grid-template-columns: 33.33333% 33.33333% 33.33333%;
+  }
+  .content .movies .video-wraps {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (max-width: 660px) {
+  .content .wrap .video-wraps {
+    grid-template-columns: 50% 50%;
+  }
+  .content .movies .video-wraps {
+    grid-template-columns: 100%;
+  }
+  .play {
+    width: 97%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .play video {
+    height: 720px;
+  }
+}

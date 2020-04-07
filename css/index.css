@@ -1,0 +1,244 @@
+@charset "UTF-8";
+.handset-body {
+  overflow: hidden;
+  background: white;
+}
+
+.img-wrap {
+  height: 100%;
+  color: white;
+}
+
+.img-wrap > li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 1.6s;
+  transition: opacity 1.6s;
+}
+
+.img-wrap > li.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.img-wrap > li strong, .img-wrap > li span {
+  position: absolute;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.img-wrap > li strong {
+  display: inline-block;
+  font-size: 3.8rem;
+  font-weight: 100;
+  font-family: '仿宋';
+  width: 470px;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.img-wrap > li strong em {
+  font-size: 1.2rem;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.img-wrap > li span {
+  position: absolute;
+  padding: .2rem .5rem;
+  border: 1px solid white;
+  font-size: 20px;
+  text-shadow: 0 1px 3px #404040;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+}
+
+.img-wrap > li:nth-child(1) {
+  background: url("../imgs/pic1.jpg") center/cover;
+}
+
+.img-wrap > li:nth-child(1) strong {
+  top: 9.6vh;
+}
+
+.img-wrap > li:nth-child(1) span {
+  left: 44.5vw;
+  top: 26vh;
+}
+
+.img-wrap > li:nth-child(2) {
+  background: url("../imgs/pic2.jpg") center/cover;
+}
+
+.img-wrap > li:nth-child(2) strong {
+  top: 12vh;
+  color: #404040;
+}
+
+.img-wrap > li:nth-child(2) span {
+  top: 69.3vh;
+  left: 21vw;
+}
+
+.img-wrap > li:nth-child(3) {
+  background: url("../imgs/pic3.jpg") center/cover;
+}
+
+.img-wrap > li:nth-child(3) strong {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  top: 10.3vh;
+}
+
+.img-wrap > li:nth-child(3) span {
+  top: 53vh;
+  left: 21.8vw;
+}
+
+.img-wrap > li:nth-child(4) {
+  background: url("../imgs/pic4.jpg") center/cover;
+  color: #404040;
+}
+
+.img-wrap > li:nth-child(4) strong {
+  top: 12.2vh;
+}
+
+.img-wrap > li:nth-child(4) span {
+  border-color: #404040;
+  top: 58.8vh;
+  left: 32.7vw;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top: -142px;
+  -webkit-transform: translateY(74px);
+  transform: translateY(74px);
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
+}
+
+.footer .btn {
+  width: 280px;
+  height: 50px;
+  margin: 0 auto;
+  margin-bottom: 18px;
+}
+
+.footer .btn ul {
+  width: 100%;
+  height: 100%;
+}
+
+.footer .btn li {
+  width: 50px;
+  height: 100%;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 50px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  background: transparent;
+  color: #ddd;
+}
+
+.footer .btn li.active {
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.footer .message {
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: .8rem;
+  padding: 18px 0;
+  color: white;
+}
+
+.footer .message a {
+  color: white;
+}
+
+marquee {
+  position: fixed;
+  bottom: 17%;
+  left: 50%;
+  font-size: 1.2rem;
+  text-shadow: 1px 2px 3px black;
+  cursor: pointer;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/* 视频播放 */
+.play {
+  z-index: 11;
+  display: none;
+  position: fixed;
+  width: 100%;
+  max-width: 1366px;
+  max-height: 720px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: #000;
+}
+
+.play .close {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  padding: .5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-shadow: 2px 2px 3px black;
+}
+
+.play video {
+  background: #000;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .img-wrap > li strong {
+    font-size: 2.2rem;
+  }
+  .img-wrap > li span {
+    font-size: .8rem;
+  }
+  .img-wrap > li:nth-child(1) strong {
+    left: 12vw;
+  }
+  .img-wrap > li:nth-child(1) span {
+    left: 36vw;
+  }
+  .img-wrap > li:nth-child(2) strong {
+    left: 18vw;
+  }
+  .img-wrap > li:nth-child(3) strong {
+    left: -60vw;
+    line-height: 30px;
+  }
+  .img-wrap > li:nth-child(4) strong {
+    left: 12vw;
+  }
+  marquee {
+    display: none;
+  }
+}

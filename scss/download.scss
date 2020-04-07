@@ -1,0 +1,37 @@
+$content-bg: #e2e5f2;
+$link-color:#4395ff;
+
+.content{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    background: $content-bg;
+    border-radius: 8px;
+    padding: 1.3rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: #404040;
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+    a{
+        color: $link-color;
+        text-shadow: 0 0 0 transparent;
+        word-wrap: break-word;
+        &::after{
+            background: $link-color;
+        }
+    }
+    ul{
+        
+        span{
+            font-size: 24px;
+        }
+        li{
+            line-height: 40px;
+            border-top: 1px solid #eee;
+        }
+        &:not(:first-of-type){
+            margin-top: 24px;
+        }
+    }
+    
+}

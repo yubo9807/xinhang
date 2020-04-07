@@ -1,0 +1,158 @@
+a {
+  color: black;
+}
+
+.active {
+  -webkit-transition: all .8s ease-out;
+  transition: all .8s ease-out;
+}
+
+body {
+  background: #1b373a;
+}
+
+.handset-body {
+  background: transparent;
+}
+
+.box {
+  position: relative;
+  width: 992px;
+  height: 850px;
+  margin: 0 auto;
+}
+
+.box .main {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+}
+
+.box .main .text li {
+  position: absolute;
+  top: -30px;
+}
+
+.box .main .text li h2, .box .main .text li p, .box .main .text li a {
+  opacity: 0;
+}
+
+.box .main .text li h2.active, .box .main .text li p.active, .box .main .text li a.active {
+  opacity: 1;
+  -webkit-transform: translatey(30px);
+  transform: translatey(30px);
+}
+
+.box .main .text li h2 {
+  font-size: 60px;
+  font-weight: 100;
+}
+
+.box .main .text li p {
+  font-size: 16px;
+  margin: 90px 0 30px 0;
+}
+
+.box .main .text li a {
+  display: inline-block;
+  padding: 3px 20px;
+  background: white;
+}
+
+.box .main .text li p, .box .main .text li a {
+  margin-left: 10px;
+}
+
+.box .main .text span {
+  position: absolute;
+  line-height: 28px;
+  width: 30px;
+  padding: 5px 0;
+  text-align: center;
+  border: 1px solid red;
+  color: red;
+  top: 178px;
+  left: 36%;
+  font-size: 25px;
+  -webkit-transform: rotateZ(30deg);
+  transform: rotateZ(30deg);
+}
+
+.box .main .img {
+  position: relative;
+  width: 420px;
+}
+
+.box .main .img img {
+  position: absolute;
+  top: -39px;
+  right: -50px;
+  width: 100%;
+  opacity: 0;
+}
+
+.box .main .img img.active {
+  opacity: 1;
+  -webkit-transform: translateX(-50px);
+  transform: translateX(-50px);
+}
+
+.box .sign-nav {
+  position: absolute;
+  width: 100%;
+  height: 78px;
+  bottom: 100px;
+}
+
+.box .sign-nav ul {
+  width: 992px;
+  height: 100%;
+  margin: 0 auto;
+  background: #0084cf;
+  border-radius: 10px;
+}
+
+.box .sign-nav ul li {
+  float: left;
+  width: 12.5%;
+  height: 100%;
+  background: url("../imgs/sign/sign.png") no-repeat;
+  background-size: 800%;
+  cursor: pointer;
+}
+
+.box .sign-nav ul li:nth-child(1) {
+  background-position-x: -2%;
+}
+
+.box .sign-nav ul li:nth-child(2) {
+  background-position-x: 13.5%;
+}
+
+.box .sign-nav ul li:nth-child(3) {
+  background-position-x: 28%;
+}
+
+.box .sign-nav ul li:nth-child(4) {
+  background-position-x: 43%;
+}
+
+.box .sign-nav ul li:nth-child(5) {
+  background-position-x: 58.5%;
+}
+
+.box .sign-nav ul li:nth-child(6) {
+  background-position-x: 73.5%;
+}
+
+.box .sign-nav ul li:nth-child(7) {
+  background-position-x: 88.5%;
+}
+
+.box .sign-nav ul li:nth-child(8) {
+  background-position-x: 102%;
+}
+
+.box .sign-nav ul li.active {
+  background-position-y: -77.5px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 取消双击缩放，禁止自动识别手机号、邮箱，缩放比例 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, telephone=no, email=no, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="X5-orientation" content="portrait">
+    <meta name="screen-orientation" content="portrait">
+    <title>looding</title>
+    <link rel="icon" href="./imgs/logo.ico">
+    <link rel="preload" href="./index.html" as="style">  <!-- 异步加载 index 页面 -->
+    <link rel="preload" href="./css/index.css" as="style">  <!-- 异步加载 index 样式 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/demo.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="loading">loading</div>
+        <div class="dots animate" id="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    <script>
+        let dots = document.getElementById('dots');
+        setInterval(function () {
+            dots.classList.remove('animate');
+            setTimeout(function () {
+                dots.classList.add('animate');
+            }, 200);
+        },3000);
+
+        // 3秒后跳转页面
+        setTimeout(() => {
+            window.location.href = './index.html';
+        }, 3600);
+    </script>
+</body>
+</html>

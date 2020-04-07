@@ -1,0 +1,181 @@
+button {
+  background: transparent;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.wrapper {
+  width: 1240px;
+  height: 720px;
+  margin: 5rem auto;
+  color: #34495e;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 1800px;
+  perspective: 1800px;
+}
+
+.wrapper ol {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.wrapper .section-wrap {
+  position: relative;
+}
+
+.wrapper a {
+  color: #4395ff;
+  text-shadow: 0 0 0 transparent;
+}
+
+.wrapper a::after {
+  background: #4395ff;
+}
+
+.wrapper h4 {
+  margin-top: 20px;
+}
+
+.wrapper .left, .wrapper .middle, .wrapper .right {
+  width: 33.333333%;
+  height: 100%;
+  float: left;
+  background: #e2e5f2;
+  border-radius: 10px;
+}
+
+.wrapper .left {
+  position: relative;
+}
+
+.wrapper .left {
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  z-index: 2;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform .8s;
+  transition: -webkit-transform .8s;
+  transition: transform .8s;
+  transition: transform .8s, -webkit-transform .8s;
+}
+
+.wrapper .left .page, .wrapper .left .back {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+}
+
+.wrapper .left .page {
+  padding: 40px;
+  -webkit-transform: translateZ(-0.1px) rotateY(180deg);
+  transform: translateZ(-0.1px) rotateY(180deg);
+  background: #e2e5f2;
+  z-index: 5;
+}
+
+.wrapper .left .page .section-wrap {
+  height: 100%;
+}
+
+.wrapper .left .page .open {
+  position: absolute;
+  padding: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  right: 0;
+}
+
+.wrapper .left .page .logo {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 90%;
+}
+
+.wrapper .left .page .author {
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+}
+
+.wrapper .left .back {
+  -webkit-transform: translateZ(0.1px) rotateY(0);
+  transform: translateZ(0.1px) rotateY(0);
+  z-index: 4;
+  background: #e2e5f2;
+  padding: 20px;
+}
+
+.wrapper .middle, .wrapper .right {
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wrapper .middle {
+  -webkit-transform: translateZ(-0.1px);
+  transform: translateZ(-0.1px);
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.wrapper .right {
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-transition: -webkit-transform .8s;
+  transition: -webkit-transform .8s;
+  transition: transform .8s;
+  transition: transform .8s, -webkit-transform .8s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.wrapper .right .page, .wrapper .right .back {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  background: #e2e5f2;
+  border-radius: 10px;
+}
+
+.wrapper .right .page {
+  -webkit-transform: translateZ(0.1px) rotateY(180deg);
+  transform: translateZ(0.1px) rotateY(180deg);
+}
+
+.wrapper .right .back {
+  -webkit-transform: translateZ(0.2px) rotateY(0);
+  transform: translateZ(0.2px) rotateY(0);
+}
+
+.wrapper .right .close {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  right: 20px;
+  top: 20px;
+}
